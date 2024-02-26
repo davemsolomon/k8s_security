@@ -1,3 +1,6 @@
+you can go here - https://killercoda.com/playgrounds/scenario/kubernetes  
+and just do ./run.sh to see the following in action  
+
 --this one creates a user sundaynightsa with a clusterrole with a regular binding   
 kubectl apply -f sundaynight.yml  
   
