@@ -9,5 +9,10 @@ kubectl get storageclasses --as=system:serviceaccount:sundaynightns:sundaynights
 kubectl get storageclasses --as=system:serviceaccount:sundaynightns:sundaynightsa2 -n sundaynightns
 
 kubectl get namespaces --as=system:serviceaccount:sundaynightns:sundaynightsa -n sundaynightns  
-kubectl get namespaces --as=system:serviceaccount:sundaynightns:sundaynightsa2 -n sundaynightns
+Error from server (Forbidden): namespaces is forbidden: User "system:serviceaccount:sundaynightns:sundaynightsa" cannot list resource "namespaces" in API group "" at the cluster scope  
 
+kubectl get namespaces --as=system:serviceaccount:sundaynightns:sundaynightsa2 -n sundaynightns  
+NAME               STATUS   AGE  
+default            Active   44h  
+devops-tools       Active   92m  
+fln-rnd            Active   43h  
