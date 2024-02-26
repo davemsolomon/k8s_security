@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sundaynightns
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: sundaynightsa2
+  namespace: sundaynightns
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sundaynight-role2
+  namespace: sundaynightns
+rules:
+- apiGroups: ["", "pods", "networking.k8s.io", "apiextensions.k8s.io", "storage.k8s.io", "operator.openshift.io"]
+  resources: ["namespaces", "customresourcedefinitions", "storageclasses", "ingresses"]
+  verbs: ["get", "list"]
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: sundaynight-rolebinding2
+  namespace: sundaynightns
+subjects:
+- kind: ServiceAccount
+  name: sundaynightsa2
+  namespace: sundaynightns
+  apiGroup: ""
+roleRef:
+  kind: ClusterRole
+  name: sundaynight-role2
+  apiGroup: rbac.authorization.k8s.io
+---
