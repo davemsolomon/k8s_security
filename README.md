@@ -1,4 +1,5 @@
 you can go here - https://killercoda.com/playgrounds/scenario/kubernetes  
+choose Kubernetes 1.29 Playground
 
 controlplane $ git clone https://github.com/davemsolomon/k8s_security.git
 controlplane $ cd k8s_security/
