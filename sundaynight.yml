@@ -27,7 +27,6 @@ subjects:
 - kind: ServiceAccount
   name: sundaynightsa
   namespace: sundaynightns
-  apiGroup: ""
 roleRef:
   kind: ClusterRole
   name: sundaynight-role
